@@ -4,8 +4,6 @@ const mysql = require('mysql');
 const cors= require('cors');
 const bcrypt=require('bcrypt');
 const { response } = require("express");
-require("dotenv").config();
-
 const salt=10;
 
 app.use(cors());
@@ -13,10 +11,10 @@ app.use(express.json());
 
 const db =mysql.createConnection({
 
-    user: "root",
-    host:"localhost",
-    password:"root",
-    database:"georblog"
+    user: "u72tamaz3ktigxml",
+    host:"biwlqf99sssfw4luw9fr-mysql.services.clever-cloud.com",
+    password:"vmNlaPQdiLJl26ym4MX0",
+    database:"biwlqf99sssfw4luw9fr"
 })
 
 // add a user to database
@@ -194,6 +192,6 @@ app.delete('/blogs/:id', (req, res)=>{
 
 
 
-app.listen(process.env.PORT||3001, ()=>{
+app.listen(3001, ()=>{
     console.log("server runing on 3001")
 })
